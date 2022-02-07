@@ -28,8 +28,7 @@ const Signup = () => {
           if (!firstName || !lastName || !phone || !email || !password || !role_id) {
             setMessage("Please fill all the info");
           } else {
-            console.log("aaaaaa");
-            await axios.post("/register", newUser).then((response) => {
+            await axios.post("http://localhost:5000/register", newUser).then((response) => {
               if (response) {
                 setMessage("The user has been created successfully ");
                 setTimeout( () =>{
@@ -102,9 +101,9 @@ const Signup = () => {
                 </Form.Group>
                 <Form.Group size="lg" controlId="formUser">
                     <Form.Label>SignUp as:</Form.Label>
-                    <select className="form-control form-control-lg">
-                        <option value="1" onClick={(e) => setRoleId(e.target.value)}>Buyer</option>
-                        <option value="2" onClick={(e) => setRoleId(e.target.value)}>Seller</option>
+                    <select onChange={(e) => setRoleId(e.target.value)} className="form-control form-control-lg">
+                        <option value="1" >Buyer</option>
+                        <option value="2" >Seller</option>
                     </select>
                 </Form.Group>
                 <Form.Group>
