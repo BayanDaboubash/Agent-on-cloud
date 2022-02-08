@@ -17,14 +17,15 @@ const login = (req, res) => {
         if (validUser) {
           const payload = {
             userId: result[0].user_id,
-            roleId: result[0].role_id,
             firstName: result[0].firstName,
           };
           const options = {
             expiresIn: "60m",
           };
           let token = jwt.sign(payload, "secret", options);
-          res.status(200).json(token);
+          res.status(200).send({
+            token, user: result[0], loggedIn: true
+          });
         } else {
           res.status(403).json("Password you've entered is incorrect");
         }

@@ -9,7 +9,7 @@ const listBuyerReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export default listDateReducer;
+export default listBuyerReducer;
 
 export const setListBuyer = (listBuyer) => {
   return { type: "SET_LISTBUYER", payload: listBuyer };

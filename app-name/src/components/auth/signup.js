@@ -111,7 +111,7 @@ const Signup = () => {
                         SignUp
                     </Button>
                 </Form.Group>
-                <div className="tostMassage">
+                <div>
                     <Form.Label>{message && <div>{message}</div>}</Form.Label>
                 </div>
             </Form>

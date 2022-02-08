@@ -21,11 +21,10 @@ const Post = () => {
                 phone,
                 user_id
             };
-            console.log("....new post ....", newDate);
             if (!name || !date || !phone || !user_id) {
                 setMessage("Please full information date");
             } else {
-                await axios.post("/addDate", newDate).then((response) => {
+                await axios.post("http://localhost:5000/addDate", newDate).then((response) => {
                     if (response) {
                         dispatch(AddDate(response.data));
                         setMessage("The Date has been successfully added");
@@ -41,8 +40,13 @@ const Post = () => {
     }
 
     const Seller = () => {
-        axios.get("/listBuyer").then((response) => {
-          setState1(response.data);
+        axios.get("http://localhost:5000/listBuyer").then((response) => {
+            const arr = response.data.filter((elem) => {
+                return elem.role_id == 2; 
+            });
+          setState1(arr);
+          console.log("arr",arr);
+          console.log("response" ,response.data);
         });
       };
 
@@ -69,8 +73,8 @@ const Post = () => {
                 <Form.Group size="lg" controlId="formBasicEmail">
                     <Form.Label>Date : </Form.Label>
                     <Form.Control
-                        type="text"
-                        placeholder="Url photo here"
+                        type="date"
+                        placeholder="Date here"
                         onChange={(e) => setDate(e.target.value)}
                         required
                     />
@@ -90,7 +94,6 @@ const Post = () => {
                     <Form.Label>Seller name: </Form.Label>
                     <Form.Label>
                         <select
-                            className="input select"
                             type="select"
                             onClick={async (e) => {
                                 Seller();
@@ -101,7 +104,7 @@ const Post = () => {
                             {state1.map((ele, i) => {
                                 return (
                                     <option value={ele.user_id} key={i}>
-                                        {ele.type}
+                                        {ele.firstName} {ele.lastName} 
                                     </option>
                                 );
                             })}
