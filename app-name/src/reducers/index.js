@@ -5,13 +5,15 @@ import addDateReducer from "./addDate";
 import listDateReducer from "./listDate";
 import deleteDateReducer from "./deleteDate";
 import listBuyerReducer from "./listBuyer";
+import searchReducer from "./search";
 
 const reducers = combineReducers({
     loginReducer,
     addDateReducer,
     listDateReducer,
     deleteDateReducer,
-    listBuyerReducer
+    listBuyerReducer,
+    searchReducer
 });
 
 const store = createStore(reducers);

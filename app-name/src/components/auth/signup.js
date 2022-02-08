@@ -54,6 +54,10 @@ const Signup = () => {
 
       
     return (
+      <div>
+        <div>
+        <img src="https://i.ibb.co/7VxS53w/logo.png" width={100} height={80} />
+      </div>
       <div className="AllClassSignUp">
         <div className="SignUp">
             <Form onSubmit={handelSubmit}>
@@ -120,8 +124,9 @@ const Signup = () => {
             </Form>
         </div>
         <div>
-          <img src="https://iszyby.com/admin/images/signup-img.jpg" width={748} height={690}/>
+          <img src="https://iszyby.com/admin/images/signup-img.jpg" width={748} height={600}/>
         </div>
+      </div>
       </div>
     );
 };

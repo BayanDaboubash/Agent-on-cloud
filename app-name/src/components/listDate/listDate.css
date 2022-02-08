@@ -20,3 +20,28 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 0px 0px;
 }
+
+.navbarStyle{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.AllClassNavbar{
+  display: grid;
+  grid-template-columns: 0.5fr 0.9fr 2.8fr 0.8fr;
+  padding: 0px 0px;
+
+}
+
+.styleNav{
+  text-decoration-line: none;
+  padding-top: 1.6rem;
+}
+
+a{
+  font-size: 1.3rem;
+  color:#58b1e7;
+  font-weight: 500;
+  text-decoration: none;
+}
