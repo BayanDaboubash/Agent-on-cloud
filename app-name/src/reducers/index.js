@@ -5,7 +5,6 @@ import addDateReducer from "./addDate";
 import listDateReducer from "./listDate";
 import deleteDateReducer from "./deleteDate";
 import listBuyerReducer from "./listBuyer";
-import searchReducer from "./search";
 
 const reducers = combineReducers({
     loginReducer,
@@ -13,7 +12,6 @@ const reducers = combineReducers({
     listDateReducer,
     deleteDateReducer,
     listBuyerReducer,
-    searchReducer
 });
 
 const store = createStore(reducers);

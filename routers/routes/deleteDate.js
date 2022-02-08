@@ -4,5 +4,5 @@ const {
 } = require("./../controllers/deleteDate");
 const deleteDateRouter = express.Router();
 
-deleteDateRouter.put("/deleteDate/:id", deleteDate);
+deleteDateRouter.put("/deleteDate", deleteDate);
 module.exports = deleteDateRouter;

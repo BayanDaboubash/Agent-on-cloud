@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, connect } from "react-redux";
 import "./login.css";
 
 
@@ -13,17 +13,22 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
   const loginPage = async () => {
     if (email && password) {
       const lowerEmail = email.toLowerCase();
       await axios.post("http://localhost:5000/", { "email": lowerEmail, "password": password }).then((response) => {
         if (response) {
           dispatch({ "type": "SET_TOKEN", "payload": response.data });
-          setMessage("Login successfully ");
-          setTimeout(() => {
-            navigate('/listDate');
-          }, 2000);
+          setMessage("Login Successfully");
+          if(response.data.user.role_id == "1"){
+            setTimeout(() => {
+              navigate('/listDate');
+            }, 2000);
+          }else{
+            setTimeout(() => {
+              navigate('/addDate');
+            }, 2000);
+          }
         } else {
           setMessage("Error happened while login, please try again");
         }
@@ -70,7 +75,7 @@ const Login = () => {
                 Login
               </Button>
               <div className="newAccount">
-              Don't have an account? <a href="/register" style={{"font-size": "15px","color" : "blue"}}>signup</a>
+              Don't have an account? <a href="/register" style={{"fontSize": "15px","color" : "blue"}}>signup</a>
               </div>
               <div>
                 <Form.Label>{message && <div className="messageLogin">{message}</div>}</Form.Label>

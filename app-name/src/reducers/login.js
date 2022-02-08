@@ -10,6 +10,7 @@ const initialState = {
 const loginReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case "SET_TOKEN":
+            sessionStorage.setItem("user",JSON.stringify({ token: payload.token, user: payload.user, loggedIn: payload.loggedIn }))
             return { token: payload.token, user: payload.user, loggedIn: payload.loggedIn };
         default:
             return state;

@@ -43,7 +43,7 @@ const Post = () => {
     const Seller = () => {
         axios.get("http://localhost:5000/listBuyer").then((response) => {
             const arr = response.data.filter((elem) => {
-                return elem.role_id == 2;
+                return elem.role_id == 1;
             });
             setState1(arr);
             console.log("arr", arr);
@@ -60,8 +60,8 @@ const Post = () => {
         <div>
             <div className="navbarStyle AllClassNavbar">
                 <img src="https://i.ibb.co/7VxS53w/logo.png" width={100} height={80} />
-                <div className="styleNav"> <a href="/addDate">Add appointment </a> </div>
                 <div className="styleNav"> <a href="/listBuyer">Seller details</a> </div>
+                <div className="styleNav"> <a href="/addDate">Add appointment </a> </div>
                 <div className="styleNav"> <a href="/">Log Out </a> </div>
             </div>
             <div className="AllClassAddDate cardAddDate">

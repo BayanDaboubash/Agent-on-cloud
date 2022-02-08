@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { Nav } from "react-bootstrap";
 import "./listDate.css";
 
 const mapStateToDrops = (state) => state.loginReducer;
@@ -24,28 +24,28 @@ const ListSeller = (state) => {
 
     return (
         <div>
-                    <div className="navbarStyle AllClassNavbar">
-                        <img src="https://i.ibb.co/7VxS53w/logo.png" width={100} height={80} />
-                        <div className="styleNav"> <a  href="/deleteDate">Appointment Status </a> </div>
-                        <div className="styleNav"> <a href="/listDate">Appointment details </a> </div>
-                        <div className="styleNav"> <a href="/">Log Out </a> </div>
-                    </div>
-                    <div className="AllClassListDate">
-                        {state1.map((ele, i) => {
-                            return (
-                                <div className="card">
-                                    <img src="https://www.kentac.org.uk/wp-content/uploads/2016/10/calendar-icon-blue_sm.png" alt="Avatar" />
-                                    <div className="container" key={i}>
-                                        Name: {ele.name} <br />
-                                        Date: {ele.date} <br />
-                                        Phone: {ele.phone}
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div >
-                );
+            <div className="navbarStyle AllClassNavbar">
+                <img src="https://i.ibb.co/7VxS53w/logo.png" width={100} height={80} />
+                <div className="styleNav"> <Link to="/listDate">Appointment details </Link>  </div>
+                <div className="styleNav"> <Link to="/deleteDate">Appointment Status </Link></div>
+                <div className="styleNav"> <Link to="/">Log Out </Link></div>
+            </div>
+            <div className="AllClassListDate">
+                {state1.map((ele, i) => {
+                    return (
+                        <div className="card" key={i}>
+                            <img src="https://www.kentac.org.uk/wp-content/uploads/2016/10/calendar-icon-blue_sm.png" alt="Avatar" />
+                            <div className="container" >
+                                Name: {ele.name} <br />
+                                Date: {ele.date} <br />
+                                Phone: {ele.phone}
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+        </div >
+    );
 };
 
-                export default connect(mapStateToDrops, null)(ListSeller);
+export default connect(mapStateToDrops, null)(ListSeller);
