@@ -69,6 +69,9 @@ const Login = () => {
               <Button className="ButtonLogin" variant="outline-dark" type="submit" >
                 Login
               </Button>
+              <div className="newAccount">
+              Don't have an account? <a href="/register" style={{"font-size": "15px","color" : "blue"}}>signup</a>
+              </div>
               <div>
                 <Form.Label>{message && <div className="messageLogin">{message}</div>}</Form.Label>
               </div>

@@ -16,7 +16,7 @@
 
 .ButtonSignUp{
     width: 10rem;
-    margin-left: 6rem;
+    margin-left: 5rem;
 }
 
 .messageSignUp{
@@ -24,3 +24,6 @@
     padding-left: 3rem;
 }
 
+.newAccount{
+    text-align: center;
+}
