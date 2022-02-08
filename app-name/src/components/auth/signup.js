@@ -99,7 +99,7 @@ const Signup = () => {
                 <Form.Group size="lg" controlId="formPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control
-                        type="password"
+                        type="text"
                         placeholder="Password"
                         name="password"
                         onChange={(e) => setPassword(e.target.value)}
