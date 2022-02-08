@@ -1,0 +1,25 @@
+.AllClassSignUp{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0px 0px;
+}
+
+.SignUp{
+    margin: 2rem;
+    margin-left: 9rem;
+    width: 25rem;
+    height: 37rem;
+    background-color: #b4ebf1	;
+    border-color: #b4ebf1	;
+    padding: 10px;
+}
+
+.ButtonSignUp{
+    width: 10rem;
+    margin-left: 7rem;
+}
+
+.messageSignUp{
+    text-align: center;
+    padding-left: 3rem;
+}

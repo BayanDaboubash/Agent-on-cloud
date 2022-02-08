@@ -1,0 +1,33 @@
+.AllClassLogin{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0px 0px;
+}
+
+.LogIn{
+    margin-top: 2rem;
+    margin-left: 9rem;
+    width: 25rem;
+    height: 20rem;
+    background-color: #b4ebf1e3	;
+    border-color: #b4ebf1	;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.ButtonLogin{
+    width: 10rem;
+    margin-left: 5rem;
+    margin-top: 1.5rem;
+}
+
+.titleLogin{
+    margin-left: 9rem;
+    margin-top: 8rem;
+    width: 25rem;
+}
+
+.messageLogin{
+    text-align: center;
+    padding-left: 6rem;
+}

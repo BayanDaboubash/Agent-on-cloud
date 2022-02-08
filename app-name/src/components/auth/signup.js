@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Form, Button } from "react-bootstrap";
+import "./signup.css";
 
 
 const Signup = () => {
@@ -53,9 +54,10 @@ const Signup = () => {
 
       
     return (
-        <div>
+      <div className="AllClassSignUp">
+        <div className="SignUp">
             <Form onSubmit={handelSubmit}>
-                <h2> SignUp </h2>
+                <h2> Sign up </h2>
                 <Form.Group size="lg" controlId="formFirstName">
                     <Form.Label>First Name</Form.Label>
                     <Form.Control
@@ -100,22 +102,27 @@ const Signup = () => {
                     />
                 </Form.Group>
                 <Form.Group size="lg" controlId="formUser">
-                    <Form.Label>SignUp as:</Form.Label>
+                    <Form.Label>Sign up as:</Form.Label>
                     <select onChange={(e) => setRoleId(e.target.value)} className="form-control form-control-lg">
                         <option value="1" >Buyer</option>
                         <option value="2" >Seller</option>
                     </select>
                 </Form.Group>
                 <Form.Group>
-                    <Button className="marg styleButton1" size="lg" variant="outline-dark" type="submit">
-                        SignUp
+                  <br/>
+                    <Button className="ButtonSignUp" variant="outline-dark" type="submit">
+                        Sign up
                     </Button>
                 </Form.Group>
                 <div>
-                    <Form.Label>{message && <div>{message}</div>}</Form.Label>
+                    <Form.Label>{message && <div className="messageSignUp">{message}</div>}</Form.Label>
                 </div>
             </Form>
         </div>
+        <div>
+          <img src="https://iszyby.com/admin/images/signup-img.jpg" width={748} height={690}/>
+        </div>
+      </div>
     );
 };
 

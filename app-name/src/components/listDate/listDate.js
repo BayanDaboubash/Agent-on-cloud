@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
-
+import "./listDate.css";
 
 const mapStateToDrops = (state) =>state.loginReducer;
 const ListSeller = (state) => {
@@ -22,16 +22,20 @@ const ListSeller = (state) => {
     }, []);
 
     return (
-        <div>
+            <div className="AllClassListDate">
             {state1.map((ele, i) => {
                 return (
-                    <p key={i}>
-                        {ele.name} {ele.date} 
-                        {ele.phone} 
-                    </p>
+                    <div className="card">
+                    <img src="https://www.kentac.org.uk/wp-content/uploads/2016/10/calendar-icon-blue_sm.png" alt="Avatar"/>
+                    <div className="container" key={i}>
+                        Name: {ele.name} <br/>
+                        Date: {ele.date} <br/>
+                        Phone: {ele.phone} 
+                    </div>
+                    </div>
                 );
             })}
-        </div>
+            </div>
     );
 };
 
