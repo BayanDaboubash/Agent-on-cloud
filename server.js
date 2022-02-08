@@ -7,7 +7,7 @@ const registerRouter = require("./routers/routes/auth/signup");
 const loginRouter = require("./routers/routes/auth/login");
 const listDateRouter = require("./routers/routes/listDate");
 const deleteDateRouter = require("./routers/routes/deleteDate");
-const listBuyerRouter = require("./routers/routes/listBuyer");
+const listSellerRouter = require("./routers/routes/listSeller");
 const addDateRouter = require("./routers/routes/addDate");
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(registerRouter);
 app.use(loginRouter);
 app.use(listDateRouter);
 app.use(deleteDateRouter);
-app.use(listBuyerRouter);
+app.use(listSellerRouter);
 app.use(addDateRouter);
 
 

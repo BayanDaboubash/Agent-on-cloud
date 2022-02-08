@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useDispatch, connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import "./login.css";
 
 
@@ -26,7 +26,7 @@ const Login = () => {
             }, 2000);
           }else{
             setTimeout(() => {
-              navigate('/addDate');
+              navigate('/listSeller');
             }, 2000);
           }
         } else {

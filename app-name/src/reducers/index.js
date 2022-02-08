@@ -4,14 +4,14 @@ import loginReducer from "./login";
 import addDateReducer from "./addDate";
 import listDateReducer from "./listDate";
 import deleteDateReducer from "./deleteDate";
-import listBuyerReducer from "./listBuyer";
+import listSellerReducer from "./listSeller";
 
 const reducers = combineReducers({
     loginReducer,
     addDateReducer,
     listDateReducer,
     deleteDateReducer,
-    listBuyerReducer,
+    listSellerReducer,
 });
 
 const store = createStore(reducers);

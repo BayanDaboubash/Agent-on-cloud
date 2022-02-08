@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Form, Button } from "react-bootstrap";
-import "./listBuyer.css";
+import "./listSeller.css";
 import { Link } from "react-router-dom";
 
-const ListBuyer = () => {
+const ListSeller = () => {
     const [state1, setState1] = useState([]);
     const [nameState, setNameState] = useState([]);
     const [search1, setSearch1] = useState("");
 
     const  Seller = async() => {
-        await axios.get("http://localhost:5000/listBuyer").then((response) => {
+        await axios.get("http://localhost:5000/listSeller").then((response) => {
             const arr = response.data.filter((elem) => {
                 return elem.role_id == 1;
             });
@@ -40,8 +40,8 @@ const ListBuyer = () => {
         <div>
             <div className="navbarStyleB AllClassNavbarB">
                 <img src="https://i.ibb.co/7VxS53w/logo.png" width={100} height={80} />
-                <div className="styleNavB"> <a href="/listBuyer">Seller details</a> </div>
-                <div className="styleNavB"> <a href="/addDate">Add appointment </a> </div>
+                <div className="styleNavB"> <Link to="/listBuyer">Seller details</Link> </div>
+                <div className="styleNavB"> <Link to="/addDate">Add appointment </Link> </div>
                     <Form className="searchStyle">
                 <div>
                     <Form.Group size="lg" controlId="formBasicEmail">
@@ -60,7 +60,7 @@ const ListBuyer = () => {
                             </Button>
                 </div>
                             </Form>
-                    <div className="styleNavB"> <a href="/">Log Out </a> </div>
+                    <div className="styleNavB"> <Link to="/">Log Out </Link> </div>
                 </div>
                 <div className="AllClassListDateB">
                     {state1.map((ele, i) => {
@@ -80,4 +80,4 @@ const ListBuyer = () => {
             );
 };
 
-            export default ListBuyer;
+            export default ListSeller;

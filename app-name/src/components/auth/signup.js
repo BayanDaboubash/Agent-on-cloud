@@ -108,8 +108,8 @@ const Signup = () => {
                 <Form.Group size="lg" controlId="formUser">
                     <Form.Label>Sign up as:</Form.Label>
                     <select onChange={(e) => setRoleId(e.target.value)} className="form-control form-control-lg">
-                        <option value="1" >Buyer</option>
-                        <option value="2" >Seller</option>
+                        <option value="1" >Seller</option>
+                        <option value="2" >Buyer</option>
                     </select>
                 </Form.Group>
                 <Form.Group>

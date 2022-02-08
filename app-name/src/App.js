@@ -5,8 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SignUp from "./components/auth/signup";
 import Login from "./components/auth/login";
 import AddDate from "./components/addDate/addDate";
-import ListBuyer from "./components/listBuyer/listBuyer"
-import ListSeller from "./components/listDate/listDate";
+import ListSeller from "./components/listSeller/listSeller"
+import ListDate from "./components/listDate/listDate";
 import DeleteDate from "./components/deleteDate/deleteDate";
 import { useDispatch, connect } from "react-redux";
 
@@ -32,8 +32,8 @@ const App = () => {
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<SignUp />} />
         <Route path="/AddDate"  element={<AddDate />} />
-        <Route path="/listBuyer"  element={<ListBuyer />} />
-        <Route path="/listDate"  element={<ListSeller />} />
+        <Route path="/listSeller"  element={<ListSeller />} />
+        <Route path="/listDate"  element={<ListDate />} />
         <Route path="/deleteDate"  element={<DeleteDate />} />
       </Routes>
 

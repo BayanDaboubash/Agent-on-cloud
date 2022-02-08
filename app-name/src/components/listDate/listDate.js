@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import "./listDate.css";
 
 const mapStateToDrops = (state) => state.loginReducer;
-const ListSeller = (state) => {
+const ListDate = (state) => {
     const [state1, setState1] = useState([]);
 
     const Seller = () => {
@@ -48,4 +48,4 @@ const ListSeller = (state) => {
     );
 };
 
-export default connect(mapStateToDrops, null)(ListSeller);
+export default connect(mapStateToDrops, null)(ListDate);

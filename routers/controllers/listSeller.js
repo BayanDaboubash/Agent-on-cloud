@@ -1,6 +1,6 @@
-const db = require("./../../db/db");
+const db = require("../../db/db");
 
-const getAllListBuyer = (req, res) => {
+const getAllListSeller = (req, res) => {
   const command = `SELECT * FROM users
   WHERE role_id= 1 AND is_deleted=0;`;
   db.query(command, (err, result) => {
@@ -11,5 +11,5 @@ const getAllListBuyer = (req, res) => {
 };
 
 module.exports = {
-    getAllListBuyer
+  getAllListSeller
 };
