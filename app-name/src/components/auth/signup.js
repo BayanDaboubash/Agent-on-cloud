@@ -84,7 +84,7 @@ const Signup = () => {
                 </Form.Group>
                 <Form.Group size="lg" controlId="formPhone">
                     <Form.Label>Phone</Form.Label>
-                    <Form.Control type="Number" placeholder="Enter Phone" name="Phone" onChange={(e) => setPhone(e.target.value)} />
+                    <Form.Control type="text" placeholder="Enter Phone" name="Phone" onChange={(e) => setPhone(e.target.value)} />
                 </Form.Group>
                 <Form.Group size="lg" controlId="formEmail">
                     <Form.Label>Email address</Form.Label>
@@ -99,7 +99,7 @@ const Signup = () => {
                 <Form.Group size="lg" controlId="formPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control
-                        type="text"
+                        type="Password"
                         placeholder="Password"
                         name="password"
                         onChange={(e) => setPassword(e.target.value)}
